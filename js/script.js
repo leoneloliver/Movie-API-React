@@ -1,25 +1,17 @@
 class App extends React.Component {
-  
   constructor() {
     super();
-    
     this.state = {
       searchResults: []
     }
-    
     this.search = this.search.bind(this);
-    
   }
-  
   showResults(response) {
     this.setState({
       searchResults: response.results
     })
     console.log(response)
   }
-  
-  
-  
   search(URL) {
     $.ajax({
       type: "GET",
@@ -30,7 +22,6 @@ class App extends React.Component {
       }.bind(this)
     });
   }
-  
   render() {
     return (
       <div>
@@ -40,16 +31,13 @@ class App extends React.Component {
     )
   }
 }
-
-class SearchBox extends React.Component {
-  
+class SearchBox extends React.Component { 
   createAjax(){
       var query = ReactDOM.findDOMNode(this.refs.query).value;
       var category = ReactDOM.findDOMNode(this.refs.category).value;
       var URL = 'https://itunes.apple.com/search?term=' + query + '&country=us&entity=' + category;
       this.props.search(URL)
-    }
-  
+  }
   render() {    
     return (
       <div className="row">
@@ -74,9 +62,7 @@ class SearchBox extends React.Component {
     )
   }
 }
-
-class Results extends React.Component {  
-  
+class Results extends React.Component {   
   render() {
     var resultItems = this.props.searchResults.map((result) =>
       <ResultItem 
@@ -99,7 +85,6 @@ class Results extends React.Component {
     )
   }
 }
-
 class ResultItem extends React.Component {
   render() {
     const description = this.props.longDescription ? this.props.longDescription.substring(0, 200) : "Sorry No Description";
@@ -117,26 +102,18 @@ class ResultItem extends React.Component {
                 </ul>
               </td>
             </tr>
-          </table>
-        
+          </table>       
           <div className="card-block">
             <h4 className="card-title">{this.props.trackName}</h4>
             <p className="card-text">{description}...</p>
           </div>
-        
           <div className="card-block">
             <a href={this.props.trackViewUrl} className="card-link btn btn-primary apple" target="_blank">See more</a>
-
           </div>
         </div>
         <hr />
       </div>
-    
-      
     )
   }
 }
-
 ReactDOM.render(<App />, document.getElementById('app'));
-
-
