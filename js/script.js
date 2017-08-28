@@ -43,7 +43,7 @@ class SearchBox extends React.Component {
       <div className="row">
         <nav className="navbar navbar-inverse">
           <div className="container">
-            <img src="https://images.vexels.com/media/users/3/130320/isolated/lists/949ce38b403dc5c4212c20a7c83e75af--cone-do-carretel-de-filme.png" className="logo"/> Filmes & APP's
+            <img src="https://images.vexels.com/media/users/3/130320/isolated/lists/949ce38b403dc5c4212c20a7c83e75af--cone-do-carretel-de-filme.png" className="logo"/> Filmes & APPs
           </div>
         </nav>
         <div className="container center">
