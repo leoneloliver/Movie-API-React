@@ -33,7 +33,6 @@ body{
   background: -moz-linear-gradient(to bottom, rgb(43, 43, 43) 1%,rgb(0, 0, 0) 52%,rgb(31, 31, 31) 100%); /* FF3.6-15 */
   background: -webkit-linear-gradient(to bottom, rgb(43, 43, 43) 1%,rgb(0, 0, 0) 52%,rgb(31, 31, 31) 100%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to bottom, rgb(43, 43, 43) 1%,rgb(0, 0, 0) 52%,rgb(31, 31, 31) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000', endColorstr='#000',GradientType=0 ); /* IE6-9 */
   height: 70px;
   padding: 18px;
   margin-bottom: 32px;
@@ -96,7 +95,7 @@ hr{
   border-top: 1px solid #232323;
 }
 .results {
-    background: rgba(0, 0, 0, 0.83);
+  background: rgba(0, 0, 0, 0.83);
 }
 .dark{
   box-shadow: 1px 1px 2px 4px #000;
